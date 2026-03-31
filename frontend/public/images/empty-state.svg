@@ -1,0 +1,16 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Paper sheets -->
+  <rect x="50" y="40" width="70" height="95" fill="none" stroke="#000" stroke-width="2" rx="4"/>
+  <rect x="60" y="50" width="70" height="95" fill="none" stroke="#000" stroke-width="1.5" opacity="0.6" rx="4"/>
+  
+  <!-- Lines on paper -->
+  <line x1="65" y1="70" x2="120" y2="70" stroke="#000" stroke-width="1.5" opacity="0.4"/>
+  <line x1="65" y1="85" x2="120" y2="85" stroke="#000" stroke-width="1.5" opacity="0.4"/>
+  <line x1="65" y1="100" x2="120" y2="100" stroke="#000" stroke-width="1.5" opacity="0.4"/>
+  <line x1="65" y1="115" x2="110" y2="115" stroke="#000" stroke-width="1.5" opacity="0.4"/>
+  
+  <!-- Pen -->
+  <g transform="translate(130, 35) rotate(45)">
+    <rect x="0" y="0" width="8" height="50" fill="#000" rx="2"/>
+  </g>
+</svg>

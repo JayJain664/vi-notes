@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- White background -->
+  <rect width="64" height="64" fill="#ffffff" stroke="#000000" stroke-width="1"/>
+  
+  <!-- Writing hand silhouette -->
+  <path d="M 24 28 L 40 12 L 48 20 L 32 36 Z" fill="#000000" stroke="#000000" stroke-width="0.5" stroke-linejoin="round"/>
+  
+  <!-- Pen tip -->
+  <circle cx="24" cy="28" r="2" fill="#000000"/>
+  
+  <!-- Text lines (writing surface) -->
+  <line x1="20" y1="42" x2="50" y2="42" stroke="#000000" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="20" y1="48" x2="50" y2="48" stroke="#000000" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="20" y1="54" x2="40" y2="54" stroke="#000000" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
