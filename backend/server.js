@@ -29,12 +29,9 @@ app.get('/',(req,res)=>{
 
 // Enable CORS (Cross-Origin Resource Sharing)
 // Allows frontend (React app) to communicate with backend
-
-
-
 app.use(
   cors({
-    origin: 'https://vi-notes-sand.vercel.app/' || 'http://localhost:3000', // use env instead of hardcoding
+    origin: ['https://vi-notes-sand.vercel.app', 'http://localhost:3000'], // Vercel frontend and local dev
     credentials: true, // allows cookies / auth headers
   })
 );
