@@ -16,6 +16,11 @@ dotenv.config();
 // Initialize Express app
 const app = express();
 
+
+app.get('/',(req,res)=>{
+  res.send("Hello ViNotes Backend!")
+})
+
 /**
  * ============================================
  * 🔧 Middleware Configuration
@@ -24,6 +29,9 @@ const app = express();
 
 // Enable CORS (Cross-Origin Resource Sharing)
 // Allows frontend (React app) to communicate with backend
+
+
+
 app.use(
   cors({
     origin: process.env.CLIENT_URL || 'http://localhost:3000', // use env instead of hardcoding
