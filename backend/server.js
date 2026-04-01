@@ -29,9 +29,27 @@ app.get('/',(req,res)=>{
 
 // Enable CORS (Cross-Origin Resource Sharing)
 // Allows frontend (React app) to communicate with backend
+const allowedOrigins = [
+  'https://vi-notes-sand.vercel.app',
+  'http://localhost:3000',
+].map((origin) => origin.replace(/\/$/, ''));
+
 app.use(
   cors({
-    origin: ['https://vi-notes-sand.vercel.app', 'http://localhost:3000'], // Vercel frontend and local dev
+    origin: (origin, callback) => {
+      // Allow server-to-server requests and tools that don't send Origin
+      if (!origin) {
+        return callback(null, true);
+      }
+
+      const normalizedOrigin = origin.replace(/\/$/, '');
+
+      if (allowedOrigins.includes(normalizedOrigin)) {
+        return callback(null, true);
+      }
+
+      return callback(new Error(`CORS blocked for origin: ${origin}`));
+    },
     credentials: true, // allows cookies / auth headers
   })
 );
