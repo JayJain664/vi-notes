@@ -34,7 +34,7 @@ app.get('/',(req,res)=>{
 
 app.use(
   cors({
-    origin: process.env.CLIENT_URL || 'http://localhost:3000', // use env instead of hardcoding
+    origin: 'https://vi-notes-sand.vercel.app/' || 'http://localhost:3000', // use env instead of hardcoding
     credentials: true, // allows cookies / auth headers
   })
 );
